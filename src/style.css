@@ -17,3 +17,9 @@ footer {
   font-size: 1.5em;
   font-weight: 500;
 }
+
+.image {
+  width: 20%;
+  height: 15em;
+  display: flex;
+}

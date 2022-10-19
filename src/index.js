@@ -9,7 +9,7 @@ const display = (array) => {
     <h3 class="title">${item.title}</h3>
     <div>
       <button class="comment-button ${item.id}" >Comments</button>
-      <button class="reservation-button ${item.id}" >reservations</button>
+      <button class="reservation-button ${item.id}" >Reservations</button>
     </div>
   </div>`;
   });

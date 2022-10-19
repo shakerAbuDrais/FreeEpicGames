@@ -1,5 +1,5 @@
 body {
-  background-color: #000000;
+  background-color: #000;
 }
 
 .navbar {
@@ -47,7 +47,7 @@ main {
   width: 65%;
   font-size: 1.1em;
   color: #f0f8ff;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 button {

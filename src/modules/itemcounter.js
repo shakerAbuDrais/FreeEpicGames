@@ -1,7 +1,5 @@
-const itemCounter = () => {
-  const box = document.querySelectorAll('.box');
-  const itemNav = document.querySelector('.itemNav');
-  itemNav.innerHTML = box.length;
+const itemCounter = (arr) => {
+  const counts = arr.length;
+  return counts;
 };
-
 export default itemCounter;

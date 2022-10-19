@@ -12,7 +12,9 @@ const display = (array) => {
     </div>
   </div>`;
   });
-  itemCounter();
+  const itemNav = document.querySelector('.itemNav');
+  itemNav.innerHTML = `(${array.length})`;
+  itemCounter(array);
 };
 
 export default display;

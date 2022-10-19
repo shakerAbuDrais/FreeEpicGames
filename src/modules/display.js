@@ -15,6 +15,7 @@ const display = (array) => {
   const itemNav = document.querySelector('.itemNav');
   itemNav.innerHTML = `(${array.length})`;
   itemCounter(array);
+  localStorage.setItem('allGames', JSON.stringify(array));
 };
 
 export default display;

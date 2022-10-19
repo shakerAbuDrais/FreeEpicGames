@@ -1,7 +1,3 @@
-body {
-  background-color: black;
-}
-
 .navbar {
   z-index: 100;
   border: 2px solid white;
@@ -21,4 +17,27 @@ footer {
   width: 20%;
   height: 15em;
   display: flex;
+}
+
+.new-pop {
+  z-index: 1000;
+  width: 80%;
+  margin: auto;
+  height: 600px;
+  border: 2px solid black;
+  background-color: white;
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  text-align: center;
+  overflow: scroll;
+  padding: 20px;
+  bottom: 20px;
+}
+
+#close {
+  font-size: xx-large;
+  position: absolute;
+  top: 0;
+  right: 10px;
 }

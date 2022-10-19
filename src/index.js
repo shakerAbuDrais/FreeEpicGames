@@ -3,6 +3,7 @@ import modal from './modules/displayGameComments.js';
 import Comments from './modules/comments.js';
 import newComment from './modules/commentsApi.js';
 import displayComment from './modules/getComments.js';
+import options from './modules/freegames.js';
 
 const display = (array) => {
   const main = document.querySelector('.main');
@@ -20,7 +21,7 @@ const display = (array) => {
   localStorage.setItem('allGames', JSON.stringify(array));
 };
 
-const options = async () => {
+options = async () => {
   const response = await fetch('https://free-epic-games.p.rapidapi.com/free', {
     method: 'GET',
     headers: {

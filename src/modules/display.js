@@ -1,4 +1,4 @@
-import itemCounter from './itemcounter.js';
+import itemCounter from '../test/itemcounter.js';
 
 const display = (array) => {
   const main = document.querySelector('.main');
@@ -8,7 +8,7 @@ const display = (array) => {
     <img class='image' src="${item.keyImages[0].url}" alt="">
     <h3 class="title">${item.title}</h3>
     <div>
-      <button class="comment-button ${item.id}" >Comments</button>
+      <button class="comment-button ${item.id}" id ="com-id" >Comments</button>
     </div>
   </div>`;
   });

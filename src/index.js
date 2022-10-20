@@ -2,17 +2,20 @@ import './style.css';
 import modal from './modules/displayGameComments.js';
 import Comments from './modules/comments.js';
 import newComment from './modules/commentsApi.js';
-import displayComment from './modules/getComments.js';
+import getComments from './modules/getComments.js';
 import options from './modules/freegames.js';
 
-window.addEventListener('load', () => {
-  options();
-  window.addEventListener('click', (e) => {
+// window.addEventListener('load', () => {
+options();
+const body = document.querySelector('#body');
+body.addEventListener('click', (e) => {
+  if (e.target.textContent === 'Comments') {
     const games = JSON.parse(localStorage.getItem('allGames'));
     const id = e.target.className.split(' ')[1];
     games.forEach((game) => {
       if (id === game.id) {
         modal(id);
+        getComments(id);
       }
     });
     const closeBtn = document.querySelector('#close');
@@ -34,7 +37,7 @@ window.addEventListener('load', () => {
       const currentDate = ` ${month}/ ${day}/ ${year}`;
       Comments.addComment(name.value, comment.value, newId, currentDate);
       newComment(name.value, comment.value, newId);
-      displayComment(newId);
     });
-  });
+  }
 });
+// });

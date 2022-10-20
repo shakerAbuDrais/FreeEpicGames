@@ -8,7 +8,7 @@ const display = (array) => {
     <img class='image' src="${item.keyImages[0].url}" alt="">
     <h3 class="title">${item.title}</h3>
     <div>
-      <button class="comment-button ${item.id}" >Comments</button>
+      <button class="comment-button ${item.id}" id ="com-id" >Comments</button>
     </div>
   </div>`;
   });

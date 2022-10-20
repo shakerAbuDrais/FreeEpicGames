@@ -1,4 +1,4 @@
-import itemCounter from './itemcounter.js';
+import itemCounter from '../test/itemcounter.js';
 
 const display = (array) => {
   const main = document.querySelector('.main');

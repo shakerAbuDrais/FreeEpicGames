@@ -1,5 +1,6 @@
 import itemCounter from './itemcounter.js';
 import likeSend from './sendlikes.js';
+import getLike from './getLikes.js';
 
 const display = (array) => {
   const main = document.querySelector('.main');
@@ -11,13 +12,14 @@ const display = (array) => {
     <div class="comment-like">
       <button class="comment-button ${item.id}" >Comments</button>
       <div class="like-div">
-      <button class="like-button ${item.id}" id='${item.id}'>
+      <button class="like-button" id='${item.id}'>
       <i class="fa fa-heart"></i>
       </button>
       <p id="countlike"></p>
       </div>
     </div>
   </div>`;
+    getLike(item.id);
   });
   const itemNav = document.querySelector('.itemNav');
   itemNav.innerHTML = `(${array.length})`;

@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
   options();
   window.addEventListener('click', (e) => {
     const games = JSON.parse(localStorage.getItem('allGames'));
-    if (e.target.textContent === 'Comments' && e.target.className !== 'fa fa-heart') {
+    if (e.target.textContent === 'Comments' && e.target.className !== 'like-button') {
       const id = e.target.className.split(' ')[1];
       games.forEach((game) => {
         if (id === game.id) {
@@ -38,8 +38,8 @@ window.addEventListener('load', () => {
         newComment(name.value, comment.value, newId);
         displayComment(newId);
       });
-    } else if (e.target.textContent !== 'Comments' && e.target.className === 'fa fa-heart') {
-      const { id } = e.target.parentNode;
+    } else if (e.target.textContent !== 'Comments' && e.target.className === 'like-button') {
+      const { id } = e.target;
       likeSend(id);
     }
   });

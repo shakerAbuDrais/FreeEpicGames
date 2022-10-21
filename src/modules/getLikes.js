@@ -5,11 +5,11 @@ const getLike = async (id) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  const countLike = document.querySelector(`#${id}`);
   const data = await response.json();
-  countLike.innerHTML = '';
   data.forEach((el) => {
     if (id === el.item_id) {
+      const countLike = document.querySelector(`#${el.item_id}`);
+      countLike.innerHTML = '<i class="fa fa-heart"></i> ';
       countLike.innerHTML += `${el.likes} likes`;
     }
   });

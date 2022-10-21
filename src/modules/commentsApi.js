@@ -5,7 +5,7 @@ const newComment = async (username, comment, id) => {
     comment,
   };
   await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ntt9tCZkqdoaDg3jriZb/comments',
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ngPmi6EPTDMdfkgNT9zd/comments',
     {
       method: 'POST',
       headers: {

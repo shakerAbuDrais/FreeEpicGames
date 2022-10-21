@@ -4,12 +4,13 @@ import Comments from './modules/comments.js';
 import newComment from './modules/commentsApi.js';
 import getComments from './modules/getComments.js';
 import options from './modules/freegames.js';
+import likeSend from './modules/sendlikes.js';
 
 // window.addEventListener('load', () => {
 options();
 const body = document.querySelector('#body');
 body.addEventListener('click', (e) => {
-  if (e.target.textContent === 'Comments') {
+  if (e.target.textContent === 'Comments' && e.target.className !== 'like-button') {
     const games = JSON.parse(localStorage.getItem('allGames'));
     const id = e.target.className.split(' ')[1];
     games.forEach((game) => {
@@ -38,6 +39,8 @@ body.addEventListener('click', (e) => {
       Comments.addComment(name.value, comment.value, newId, currentDate);
       newComment(name.value, comment.value, newId);
     });
+  } else if (e.target.textContent !== 'Comments' && e.target.className === 'like-button') {
+    const { id } = e.target;
+    likeSend(id);
   }
 });
-// });

@@ -1,3 +1,5 @@
+import likeSend from './sendlikes.js';
+import getLike from './getLikes.js';
 import itemCounter from '../test/itemcounter.js';
 
 const display = (array) => {
@@ -7,10 +9,18 @@ const display = (array) => {
     main.innerHTML += `<div class="box">
     <img class='image' src="${item.keyImages[0].url}" alt="">
     <h3 class="title">${item.title}</h3>
+    <div class="comment-like">
     <div>
       <button class="comment-button ${item.id}" id ="com-id" >Comments</button>
     </div>
+      <div class="like-div">
+      <button class="like-button" id='${item.id}'>
+      <i class="fa fa-heart"></i>
+      </button>
+      <p id="countlike"></p>
+      </div>
   </div>`;
+    getLike(item.id);
   });
   const itemNav = document.querySelector('.itemNav');
   itemNav.innerHTML = `(${array.length})`;
@@ -18,4 +28,4 @@ const display = (array) => {
   localStorage.setItem('allGames', JSON.stringify(array));
 };
 
-export default display;
+export { display, likeSend };

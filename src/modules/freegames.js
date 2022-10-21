@@ -1,4 +1,4 @@
-import display from './display.js';
+import { display } from './display.js';
 
 const options = async () => {
   const response = await fetch('https://free-epic-games.p.rapidapi.com/free', {

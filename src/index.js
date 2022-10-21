@@ -6,7 +6,6 @@ import getComments from './modules/getComments.js';
 import options from './modules/freegames.js';
 import likeSend from './modules/sendlikes.js';
 
-// window.addEventListener('load', () => {
 options();
 const body = document.querySelector('#body');
 body.addEventListener('click', (e) => {

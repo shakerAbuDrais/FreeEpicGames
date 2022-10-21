@@ -83,3 +83,31 @@ button:hover {
   top: 0;
   right: 10px;
 }
+
+.comment-like {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.like-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-button {
+  background: transparent;
+  color: #fff;
+}
+
+.like-button:hover {
+  background: transparent;
+  color: #f00;
+}
+
+.like-button:active {
+  color: #f00;
+}

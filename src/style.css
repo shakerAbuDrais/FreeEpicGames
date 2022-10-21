@@ -1,3 +1,127 @@
 body {
-    background-color: bisque;
+  background-color: #000;
+}
+
+.navbar {
+  z-index: 100;
+  border: 2px solid #fff;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #fcfcfc;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  text-align: center;
+  margin: 2em 0;
+}
+
+.box {
+  background: #56565d;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+  border-radius: 3px;
+}
+
+.image {
+  width: 80%;
+  height: 320px;
+}
+
+.title {
+  font-size: 1.1em;
+  color: #f0f8ff;
+  padding: 0.5em;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: #cd5c5c;
+  color: #fff;
+}
+
+.new-pop {
+  z-index: 1000;
+  width: 80%;
+  margin: auto;
+  height: 600px;
+  border: 2px solid black;
+  background-color: white;
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  text-align: center;
+  overflow: scroll;
+  padding: 20px;
+  bottom: 20px;
+}
+
+#close {
+  font-size: xx-large;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.comment-like {
+  display: flex;
+  max-width: 50%;
+  align-items: baseline;
+  gap: 10px;
+  margin: auto;
+}
+
+.like-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-button {
+  background: transparent;
+  color: #fff;
+}
+
+.like-button:hover {
+  background: transparent;
+  color: #f00;
+}
+
+.like-button:active {
+  color: #f00;
+}
+
+.comment-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  width: 50%;
+  margin: auto;
+}
+
+form {
+  text-align: left;
+  width: 50%;
+  margin: auto;
 }

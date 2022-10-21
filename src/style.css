@@ -22,7 +22,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
-  align-items: center;
   justify-content: center;
   text-align: center;
   margin: 2em 0;
@@ -40,11 +39,10 @@ main {
 
 .image {
   width: 80%;
-  height: 20em;
+  height: 320px;
 }
 
 .title {
-  width: 65%;
   font-size: 1.1em;
   color: #f0f8ff;
   padding: 0.5em;
@@ -84,12 +82,12 @@ button:hover {
   right: 10px;
 }
 
-<<<<<<< HEAD
 .comment-like {
   display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: space-evenly;
+  max-width: 50%;
+  align-items: baseline;
+  gap: 10px;
+  margin: auto;
 }
 
 .like-div {
@@ -112,7 +110,7 @@ button:hover {
 .like-button:active {
   color: #f00;
 }
-=======
+
 .comment-text {
   display: flex;
   flex-direction: column;
@@ -127,4 +125,3 @@ form {
   width: 50%;
   margin: auto;
 }
->>>>>>> dev

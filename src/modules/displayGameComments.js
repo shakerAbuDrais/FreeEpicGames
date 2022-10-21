@@ -14,9 +14,9 @@ const modal = (id) => {
         <h3> Add your comment </h3>
         <form>
             <label for="name"></label><br>
-            <input type="text" id="name" name="name" value=""><br>
+            <input type="text" id="name" name="name" value="" placeholder = " Your Name"><br>
             <label for="comment"></label><br>
-            <textarea id="comment" name="comment"></textarea><br><br>
+            <textarea id="comment" name="comment" placeholder = " Your insights"></textarea><br><br>
             <input id = "submit" class = "${game.id}" type="submit" value="Submit">
         </form>
         </div>`;

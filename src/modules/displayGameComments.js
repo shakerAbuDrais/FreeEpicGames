@@ -8,9 +8,11 @@ const modal = (id) => {
       <span id = "close">&#10008;</span>
       <h2>${game.title}</h2>
         <p>${game.description}</p>
-        <div class = "comment-text"></div>
+        <h3 class = "com-counter"> </h3>
+        <div class = "comment-text">
+        </div>
+        <h3> Add your comment </h3>
         <form>
-            <h3> Add your comment </h3>
             <label for="name"></label><br>
             <input type="text" id="name" name="name" value=""><br>
             <label for="comment"></label><br>

@@ -1,3 +1,5 @@
+import getComments from './getComments.js';
+
 const newComment = async (username, comment, id) => {
   const data = {
     item_id: id,
@@ -14,6 +16,7 @@ const newComment = async (username, comment, id) => {
       body: JSON.stringify(data),
     },
   );
+  getComments(id);
 };
 
 export default newComment;

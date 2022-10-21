@@ -13,15 +13,6 @@ const likeSend = async (id) => {
     },
   );
 };
-const likeButtons = document.querySelectorAll('.like-button');
-likeButtons.forEach((button) => {
-  button.addEventListener('click', async (e) => {
-    const { id } = e.target;
-    await likeSend(id);
-    getLike();
-  });
-});
-
 const getLike = async () => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ntt9tCZkqdoaDg3jriZb/likes', {
     method: 'GET',
@@ -61,4 +52,12 @@ const display = (array) => {
   localStorage.setItem('allGames', JSON.stringify(array));
 };
 
+const likeButtons = document.querySelectorAll('.like-button');
+likeButtons.forEach((button) => {
+  button.addEventListener('click', async (e) => {
+    const { id } = e.target;
+    await likeSend(id);
+    getLike();
+  });
+});
 export default display;
